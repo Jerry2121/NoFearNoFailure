@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: b31e0ebe957ea7a41851ba3ba2281fca
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature creeper
+    100002: Armature enderman
+    100004: Armature irongolem
+    100006: Armature steve
+    100008: armature steve 2
+    100010: Armature.002
+    100012: Body
+    100014: Bone
+    100016: Bone 1
+    100018: Bone 2
+    100020: Bone 3
+    100022: Bone 4
+    100024: Bone.001
+    100026: Bone.001 1
+    100028: Bone.001 2
+    100030: Bone.001 3
+    100032: Bone.001 4
+    100034: Bone.001_end
+    100036: Bone.002
+    100038: Bone.002 1
+    100040: Bone.002 2
+    100042: Bone.002_end
+    100044: Bone.002_end 1
+    100046: Bone.002_end 2
+    100048: Bone.003
+    100050: Bone.003 1
+    100052: Bone.003 2
+    100054: Bone.003_end
+    100056: Bone.003_end 1
+    100058: Bone.004
+    100060: Bone.004 1
+    100062: Bone.004 2
+    100064: Bone.004 3
+    100066: Bone.004 4
+    100068: Bone.004_end
+    100070: Bone.004_end 1
+    100072: Bone.004_end 2
+    100074: Bone.004_end 3
+    100076: Bone.005
+    100078: Bone.005 1
+    100080: Bone.005 2
+    100082: Bone.005 3
+    100084: Bone.005 4
+    100086: Bone.005_end
+    100088: Bone.005_end 1
+    100090: Bone.005_end 2
+    100092: Bone.005_end 3
+    100094: Bone.006
+    100096: Bone.006 1
+    100098: Bone.006 2
+    100100: Bone.006 3
+    100102: Bone.006 4
+    100104: Bone.006_end
+    100106: Bone.006_end 1
+    100108: Bone.006_end 2
+    100110: Bone.006_end 3
+    100112: Bone.007
+    100114: Bone.007 1
+    100116: Bone.007 2
+    100118: Bone.007_end
+    100120: Bone.007_end 1
+    100122: Bone.007_end 2
+    100124: Bone.008
+    100126: Bone.008 1
+    100128: Bone.008_end
+    100130: Bone.009
+    100132: Bone.009 1
+    100134: Bone.009 2
+    100136: Bone.009_end
+    100138: Bone.009_end 1
+    100140: Bone.010
+    100142: Bone.010 1
+    100144: Bone.010_end
+    100146: Bone.011
+    100148: Bone.011 1
+    100150: Bone.011_end
+    100152: Bone.012
+    100154: Bone.012_end
+    100156: Camera
+    100158: Chest
+    100160: creeper
+    100162: enderman
+    100164: Head
+    100166: Head_end
+    100168: IK Entire
+    100170: IK Left Arm
+    100172: IK Left Arm_end
+    100174: IK Left Leg
+    100176: IK Left Leg_end
+    100178: IK Right Arm
+    100180: IK Right Arm_end
+    100182: IK Right Leg
+    100184: IK Right Leg_end
+    100186: irongolem
+    100188: irongolem 3d
+    100190: Left Arm Lower
+    100192: Left Arm Lower_end
+    100194: Left Arm Upper
+    100196: Left Elbow
+    100198: Left Elbow_end
+    100200: Left Knee
+    100202: Left Knee_end
+    100204: Left Leg Lower
+    100206: Left Leg Lower_end
+    100208: Left Leg upper
+    100210: Look
+    100212: Look_end
+    100214: rig steve
+    100216: Right Arm Lower
+    100218: Right Arm Lower_end
+    100220: Right Arm Upper
+    100222: Right Elbow
+    100224: Right Elbow_end
+    100226: Right Knee
+    100228: Right Knee_end
+    100230: Right leg Lower
+    100232: Right leg Lower_end
+    100234: Right Leg upper
+    100236: sourcil irongolem 3d
+    100238: //RootNode
+    100240: steve 2
+    100242: Sun
+    100244: Waist
+    100246: yeud irongolem 3d
+    100248: Zombie Chest
+    100250: Zombie Eyes
+    100252: Zombie Feet
+    100254: Zombie Hands
+    100256: Zombie Head
+    100258: Zombie Hips
+    400000: Armature creeper
+    400002: Armature enderman
+    400004: Armature irongolem
+    400006: Armature steve
+    400008: armature steve 2
+    400010: Armature.002
+    400012: Body
+    400014: Bone
+    400016: Bone 1
+    400018: Bone 2
+    400020: Bone 3
+    400022: Bone 4
+    400024: Bone.001
+    400026: Bone.001 1
+    400028: Bone.001 2
+    400030: Bone.001 3
+    400032: Bone.001 4
+    400034: Bone.001_end
+    400036: Bone.002
+    400038: Bone.002 1
+    400040: Bone.002 2
+    400042: Bone.002_end
+    400044: Bone.002_end 1
+    400046: Bone.002_end 2
+    400048: Bone.003
+    400050: Bone.003 1
+    400052: Bone.003 2
+    400054: Bone.003_end
+    400056: Bone.003_end 1
+    400058: Bone.004
+    400060: Bone.004 1
+    400062: Bone.004 2
+    400064: Bone.004 3
+    400066: Bone.004 4
+    400068: Bone.004_end
+    400070: Bone.004_end 1
+    400072: Bone.004_end 2
+    400074: Bone.004_end 3
+    400076: Bone.005
+    400078: Bone.005 1
+    400080: Bone.005 2
+    400082: Bone.005 3
+    400084: Bone.005 4
+    400086: Bone.005_end
+    400088: Bone.005_end 1
+    400090: Bone.005_end 2
+    400092: Bone.005_end 3
+    400094: Bone.006
+    400096: Bone.006 1
+    400098: Bone.006 2
+    400100: Bone.006 3
+    400102: Bone.006 4
+    400104: Bone.006_end
+    400106: Bone.006_end 1
+    400108: Bone.006_end 2
+    400110: Bone.006_end 3
+    400112: Bone.007
+    400114: Bone.007 1
+    400116: Bone.007 2
+    400118: Bone.007_end
+    400120: Bone.007_end 1
+    400122: Bone.007_end 2
+    400124: Bone.008
+    400126: Bone.008 1
+    400128: Bone.008_end
+    400130: Bone.009
+    400132: Bone.009 1
+    400134: Bone.009 2
+    400136: Bone.009_end
+    400138: Bone.009_end 1
+    400140: Bone.010
+    400142: Bone.010 1
+    400144: Bone.010_end
+    400146: Bone.011
+    400148: Bone.011 1
+    400150: Bone.011_end
+    400152: Bone.012
+    400154: Bone.012_end
+    400156: Camera
+    400158: Chest
+    400160: creeper
+    400162: enderman
+    400164: Head
+    400166: Head_end
+    400168: IK Entire
+    400170: IK Left Arm
+    400172: IK Left Arm_end
+    400174: IK Left Leg
+    400176: IK Left Leg_end
+    400178: IK Right Arm
+    400180: IK Right Arm_end
+    400182: IK Right Leg
+    400184: IK Right Leg_end
+    400186: irongolem
+    400188: irongolem 3d
+    400190: Left Arm Lower
+    400192: Left Arm Lower_end
+    400194: Left Arm Upper
+    400196: Left Elbow
+    400198: Left Elbow_end
+    400200: Left Knee
+    400202: Left Knee_end
+    400204: Left Leg Lower
+    400206: Left Leg Lower_end
+    400208: Left Leg upper
+    400210: Look
+    400212: Look_end
+    400214: rig steve
+    400216: Right Arm Lower
+    400218: Right Arm Lower_end
+    400220: Right Arm Upper
+    400222: Right Elbow
+    400224: Right Elbow_end
+    400226: Right Knee
+    400228: Right Knee_end
+    400230: Right leg Lower
+    400232: Right leg Lower_end
+    400234: Right Leg upper
+    400236: sourcil irongolem 3d
+    400238: //RootNode
+    400240: steve 2
+    400242: Sun
+    400244: Waist
+    400246: yeud irongolem 3d
+    400248: Zombie Chest
+    400250: Zombie Eyes
+    400252: Zombie Feet
+    400254: Zombie Hands
+    400256: Zombie Head
+    400258: Zombie Hips
+    2000000: Camera
+    2100000: creeper.001
+    2100002: creeper.002
+    2100004: creeper.003
+    2100006: creeper.004
+    2100008: creeper.005
+    2100010: creeper.006
+    2100012: tete
+    2100014: corp
+    2100016: bras
+    2100018: Material.001
+    2100020: Material.003
+    2100022: Material.004
+    2100024: Material.002
+    2100026: Texture
+    2100028: Material.005
+    2100030: Material.007
+    2100032: No Name
+    2300000: Zombie Chest
+    2300002: Zombie Eyes
+    2300004: Zombie Feet
+    2300006: Zombie Hands
+    2300008: Zombie Head
+    2300010: Zombie Hips
+    3300000: Zombie Chest
+    3300002: Zombie Eyes
+    3300004: Zombie Feet
+    3300006: Zombie Hands
+    3300008: Zombie Head
+    3300010: Zombie Hips
+    4300000: creeper
+    4300002: enderman
+    4300004: irongolem
+    4300006: yeud irongolem 3d
+    4300008: sourcil irongolem 3d
+    4300010: irongolem 3d
+    4300012: rig steve
+    4300014: steve 2
+    4300016: Zombie Chest
+    4300018: Zombie Eyes
+    4300020: Zombie Feet
+    4300022: Zombie Hands
+    4300024: Zombie Head
+    4300026: Zombie Hips
+    9500000: //RootNode
+    10800000: Sun
+    13700000: creeper
+    13700002: enderman
+    13700004: irongolem
+    13700006: irongolem 3d
+    13700008: rig steve
+    13700010: sourcil irongolem 3d
+    13700012: steve 2
+    13700014: yeud irongolem 3d
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
