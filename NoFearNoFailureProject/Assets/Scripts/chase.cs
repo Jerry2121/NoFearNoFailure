@@ -5,15 +5,17 @@ using UnityEngine.AI;
 
 public class chase : MonoBehaviour {
     public Transform[] Waypoints;
-    private int destPoint = 0;
     public Transform player;
     public GameObject Test;
+    private int destPoint = 0;
+    public int ownhp = 0;
     public float timer;
     public float timer2;
     public float TimeScare;
     public float TimeScareInt;
     public bool ScareAct;
     public bool ScarTrig;
+    public bool closeEnough;
     public bool Scare;
     public bool walking;
     public bool attack;
@@ -27,29 +29,13 @@ public class chase : MonoBehaviour {
         agent.autoBraking = false;
         GotoNextPoint();
         walking = true;
+        closeEnough = false;
         timer = 6;
+        ownhp = 10;
     }
 	
 	void Update () 
 	{
-        if (walking)
-        {
-            animator.SetBool("isWalking", true);
-        }
-        if (!walking)
-        {
-            animator.SetBool("isWalking", false);
-        }
-        if (attack)
-        {
-            GetComponent<NavMeshAgent>().speed = 0;
-            animator.SetBool("isAttack", true);
-        }
-        if (!attack)
-        {
-            animator.SetBool("isAttack", false);
-            GetComponent<NavMeshAgent>().speed = 3.5f;
-        }
         timer2 += Time.deltaTime;
         TimeScareInt += Time.deltaTime;
         TimeScare += Time.deltaTime;
@@ -59,6 +45,35 @@ public class chase : MonoBehaviour {
         Vector3 direction = player.position - this.transform.position;
         direction.y = 0;
 		float angle = Vector3.Angle(direction,this.transform.forward);
+        if (ownhp <= 0)
+        {
+            Destroy(gameObject);
+        }
+        if (walking)
+        {
+            animator.SetBool("isWalking", true);
+            attack = false;
+            closeEnough = false;
+        }
+        if (!walking)
+        {
+            animator.SetBool("isWalking", false);
+        }
+        if (attack & closeEnough)
+        {
+            if (attack && timer2 >= 1)
+            {
+                attack = false;
+                timer2 = 0;
+            }
+            GetComponent<NavMeshAgent>().speed = 0;
+            animator.SetBool("isAttack", true);
+        }
+        if (!attack)
+        {
+            animator.SetBool("isAttack", false);
+            GetComponent<NavMeshAgent>().speed = 3.5f;
+        }
         if (TimeScareInt >= 2)
         {
             ScarTrig = false;
@@ -86,11 +101,6 @@ public class chase : MonoBehaviour {
                     ScareFunction();
                     attack = true;
                     walking = false;
-                    if(attack && timer2 >= 1)
-                    {
-                        attack = false;
-                        timer2 = 0;
-                    }
                 }
                 else
                 {
@@ -127,4 +137,20 @@ public class chase : MonoBehaviour {
             ScarTrig = true;
         }
      }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "TriggerA")
+        {
+            closeEnough = true;
+        }
+        if (other.gameObject.name == "Sword")
+        {
+            ownhp = ownhp - 2;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        closeEnough = false;
+        attack = false;
+    }
 }
