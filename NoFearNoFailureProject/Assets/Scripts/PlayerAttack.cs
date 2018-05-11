@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour {
             animator.SetBool("Attack", true);
             attack = true;
         }
-        if (timer >= 2 && attack)
+        if (timer >= 0.1 && attack)
         {
             animator.SetBool("Attack", false);
             attack = false;
