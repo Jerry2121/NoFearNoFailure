@@ -59,7 +59,7 @@ public class chase : MonoBehaviour {
         {
             animator.SetBool("isWalking", false);
         }
-        if (attack & closeEnough)
+        if (closeEnough)
         {
             if (attack && timer2 >= 1)
             {
@@ -137,7 +137,7 @@ public class chase : MonoBehaviour {
             ScarTrig = true;
         }
      }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.name == "TriggerA")
         {

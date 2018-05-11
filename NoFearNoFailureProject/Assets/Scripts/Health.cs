@@ -17,7 +17,6 @@ public class Health : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            PlayerPrefs.SetInt("Health", PlayerPrefs.GetInt("Health") + 20);
             Destroy(gameObject);
         }
     }
