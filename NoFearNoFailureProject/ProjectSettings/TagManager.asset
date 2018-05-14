@@ -9,6 +9,9 @@ TagManager:
   - Health
   - Stamina
   - Mana
+  - dontmove
+  - listlast
+  - Ground
   layers:
   - Default
   - TransparentFX
