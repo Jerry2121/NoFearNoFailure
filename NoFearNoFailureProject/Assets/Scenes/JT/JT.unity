@@ -113,11 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: bc89b9e6531e66046ba4897ada0f6fd0, type: 2}
---- !u!4 &53754492 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4255739180072462, guid: 837b3aa55908c86499e687f6917a673c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1512881451}
 --- !u!1 &99570534
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,30 +142,11 @@ Transform:
   m_Father: {fileID: 1804114418}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &116841522 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1266502119117888, guid: 837b3aa55908c86499e687f6917a673c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1512881451}
 --- !u!4 &116841523 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4267569695380456, guid: 837b3aa55908c86499e687f6917a673c,
     type: 2}
   m_PrefabInternal: {fileID: 1512881451}
---- !u!114 &116841527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 116841522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6887303e4703ac42b4e0fed1bdb1ef1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TeleportMarker: {fileID: 2057499300}
-  Player: {fileID: 53754492}
-  RayLength: 50
 --- !u!1 &138521219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,6 +2056,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114674326771976464, guid: 837b3aa55908c86499e687f6917a673c,
+        type: 2}
+      propertyPath: TeleportMarker
+      value: 
+      objectReference: {fileID: 2057499300}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 837b3aa55908c86499e687f6917a673c, type: 2}
   m_IsPrefabParent: 0

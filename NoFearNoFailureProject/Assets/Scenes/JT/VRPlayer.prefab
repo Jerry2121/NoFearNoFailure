@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 81977538892596024}
   - component: {fileID: 20186723339486440}
   - component: {fileID: 114863143059288534}
+  - component: {fileID: 114674326771976464}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -1249,7 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0950df82e7936c84983497630bde5b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 0.1
+  Acceleration: 0.2
   Damping: 0.3
   BackAndSideDampen: 0.5
   JumpForce: 0.3
@@ -1263,6 +1264,20 @@ MonoBehaviour:
   useProfileData: 1
   EnableLinearMovement: 1
   EnableRotation: 1
+--- !u!114 &114674326771976464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1266502119117888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887303e4703ac42b4e0fed1bdb1ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TeleportMarker: {fileID: 0}
+  Player: {fileID: 4255739180072462}
+  RayLength: 50
 --- !u!114 &114676870266899050
 MonoBehaviour:
   m_ObjectHideFlags: 1

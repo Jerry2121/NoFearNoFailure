@@ -5,23 +5,21 @@ using UnityEngine.UI;
 
 public class Potions : MonoBehaviour {
     public GameObject StaminaText;
-    public int stamina = 100;
     public GameObject ManaText;
     public int mana = 100;
     // Use this for initialization
     void Start()
     {
         mana = 50;
-        stamina = 80;
     }
 
     // Update is called once per frame
     void Update()
     {
-        StaminaText.GetComponent<Text>().text = "Stamina: " + stamina;
-        if (stamina > 100)
+        StaminaText.GetComponent<Text>().text = "Stamina: " + PlayerPrefs.GetInt("Stamina");
+        if (PlayerPrefs.GetInt("Stamina") >= 100)
         {
-            stamina = 100;
+            PlayerPrefs.SetInt("Stamina", 100);
         }
         ManaText.GetComponent<Text>().text = ("Mana: " + mana);
         if (mana > 100)
@@ -33,7 +31,7 @@ public class Potions : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Stamina")
         {
-            stamina = stamina + 5;
+            PlayerPrefs.SetInt("Stamina", PlayerPrefs.GetInt("Stamina") + 50);
         }
         if (collision.gameObject.tag == "Health")
         {
