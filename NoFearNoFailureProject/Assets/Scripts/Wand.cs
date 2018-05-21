@@ -6,15 +6,15 @@ public class Wand : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
-
+    public float Speed = 6;
     void Update()
     {
 
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+       // var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+      //  var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
 
-        transform.Rotate(0, x, 0);
-        transform.Translate(0, 0, z);
+       // transform.Rotate(0, x, 0);
+       // transform.Translate(0, 0, z);
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -32,7 +32,7 @@ public class Wand : MonoBehaviour
             bulletSpawn.rotation);
 
         // Add velocity to the bullet
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * Speed;
 
         // Destroy the bullet after 2 seconds
         Destroy(bullet, 2.0f);

@@ -29,9 +29,8 @@ public class ChangingColors : MonoBehaviour
         if (Colors == true && Fast == true)
         {
                 num = Random.Range(1, 4);
+
         }
-
-
 
         timer += Time.deltaTime;
 
@@ -48,7 +47,6 @@ public class ChangingColors : MonoBehaviour
           */
         if (Colors == false) {
             GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f);
-
         }
         if (num == 1)
             {
