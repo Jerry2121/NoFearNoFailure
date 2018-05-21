@@ -12,6 +12,8 @@ TagManager:
   - dontmove
   - listlast
   - Ground
+  - Fire
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - Item
   - Bleh
   - OtherItem
-  - 
+  - FireLayer
   - 
   - 
   - 
