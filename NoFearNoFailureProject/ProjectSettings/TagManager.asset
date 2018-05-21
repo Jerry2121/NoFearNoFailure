@@ -25,10 +25,10 @@ TagManager:
   - Player
   - Enemy
   - SpawnWall
-  - 
-  - 
-  - 
-  - 
+  - FireBall
+  - Item
+  - Bleh
+  - OtherItem
   - 
   - 
   - 

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135326177156593964}
   - component: {fileID: 54856063230629252}
   - component: {fileID: 114727394217884302}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1410145560952666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.82, y: 5.5908527, z: 60.43}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2854197, y: 0.28541973, z: 0.28541973}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
