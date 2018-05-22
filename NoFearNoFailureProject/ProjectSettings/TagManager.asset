@@ -12,7 +12,12 @@ TagManager:
   - dontmove
   - listlast
   - Ground
+<<<<<<< HEAD
   - WandBox
+=======
+  - Fire
+  - Enemy
+>>>>>>> 6c912fbba2e3ef524f0f5e60764c2ea6ea201dd4
   layers:
   - Default
   - TransparentFX
@@ -30,7 +35,7 @@ TagManager:
   - Item
   - Bleh
   - OtherItem
-  - 
+  - FireLayer
   - 
   - 
   - 
