@@ -15,19 +15,28 @@ public class FireBall1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
-        if (timer >= 2)
+        if (fireball == true && timer >= 2)
         {
-            Fireball.SetActive(true);
+            //Destroy(this.gameObject);
+
         }
     }
     void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("22222");
 
         if (collision.gameObject.tag == "Enemy")
         {
             Fireball.SetActive(true);
-            Debug.Log("dsa");
+
         }
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Fireball.SetActive(true);
+
+        }
+
     }
 }
