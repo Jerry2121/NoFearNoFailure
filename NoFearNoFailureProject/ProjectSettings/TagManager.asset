@@ -4,19 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Effect
-  - Projectile
-  - Health
-  - Stamina
-  - Mana
-  - dontmove
-  - listlast
-  - Ground
-  - Fire
-  - Enemy
-  - Boss
   - Walls
-  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -26,15 +14,15 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - Player
-  - Enemy
-  - SpawnWall
-  - FireBall
-  - Item
-  - Bleh
-  - OtherItem
-  - FireLayer
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
