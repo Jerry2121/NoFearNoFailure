@@ -24,9 +24,9 @@ public class PlayerManager : MonoBehaviour {
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Joystick1Button11))
+        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
         {
-            stamina -= Time.deltaTime;
+            stamina -= Time.deltaTime * Mathf.Round(10.0f);
             PlayerPrefs.SetFloat("Stamina", stamina);
             if (stamina <= 0)
             {

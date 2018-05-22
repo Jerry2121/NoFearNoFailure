@@ -12,6 +12,7 @@ TagManager:
   - dontmove
   - listlast
   - Ground
+  - WandBox
   layers:
   - Default
   - TransparentFX

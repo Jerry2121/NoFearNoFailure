@@ -137,15 +137,18 @@ public class chase : MonoBehaviour {
             ScarTrig = true;
         }
      }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "TriggerA")
-        {
-            closeEnough = true;
-        }
         if (other.gameObject.name == "Sword")
         {
             ownhp = ownhp - 2;
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.name == "Close")
+        {
+            closeEnough = true;
         }
     }
     private void OnTriggerExit(Collider other)

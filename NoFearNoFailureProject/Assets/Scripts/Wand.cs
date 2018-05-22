@@ -6,6 +6,7 @@ public class Wand : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
+    public bool Inarea = false;
     public float Speed = 6;
     void Update()
     {
@@ -16,9 +17,10 @@ public class Wand : MonoBehaviour
        // transform.Rotate(0, x, 0);
        // transform.Translate(0, 0, z);
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0) && Inarea && PlayerPrefs.GetInt("Mana") >= 1)
         {
             Fire();
+            PlayerPrefs.SetInt("Mana", PlayerPrefs.GetInt("Mana") - 5);
         }
     }
 
@@ -36,5 +38,19 @@ public class Wand : MonoBehaviour
 
         // Destroy the bullet after 2 seconds
         Destroy(bullet, 2.0f);
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.tag == "WandBox")
+        {
+            Inarea = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "WandBox")
+        {
+            Inarea = false;
+        }
     }
 }
