@@ -7,8 +7,8 @@ public class Spawner : MonoBehaviour {
 	public float timer = 0.0f;
 	public float spawntimer = 2.0f;
 	public GameObject prefab;
-    public GameObject prefab1;
-    public GameObject prefab2;
+ //   public GameObject prefab1;
+  //  public GameObject prefab2;
     public int num = 0;
 
 
@@ -26,12 +26,12 @@ public class Spawner : MonoBehaviour {
 
         Vector3 spawnPosition = transform.position;
 
-        /*if (timer >= spawntimer) {
+        if (timer >= spawntimer) {
 
 			GameObject enemy = (GameObject)Instantiate (prefab, spawnPosition, Quaternion.identity);
             timer = 0;
-		}*/
-        if (Input.GetButton("Fire1"))
+		}
+       /* if (Input.GetButton("Fire1"))
         {
             if (num >= 1 && timer >= spawntimer)
             {
@@ -45,6 +45,6 @@ public class Spawner : MonoBehaviour {
             {
                 GameObject enemy = (GameObject)Instantiate(prefab2, spawnPosition, Quaternion.identity);
             }
-        }
+        }*/
     }
 }
