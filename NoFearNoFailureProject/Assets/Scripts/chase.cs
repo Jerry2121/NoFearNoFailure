@@ -36,6 +36,7 @@ public class chase : MonoBehaviour {
 	
 	void Update () 
 	{
+        
         timer2 += Time.deltaTime;
         TimeScareInt += Time.deltaTime;
         TimeScare += Time.deltaTime;
@@ -59,7 +60,7 @@ public class chase : MonoBehaviour {
         {
             animator.SetBool("isWalking", false);
         }
-        if (closeEnough)
+        if (closeEnough && attack)
         {
             if (attack && timer2 >= 1)
             {
@@ -68,6 +69,11 @@ public class chase : MonoBehaviour {
             }
             GetComponent<NavMeshAgent>().speed = 0;
             animator.SetBool("isAttack", true);
+            animator.SetBool("isWalking", false);
+        }
+        if (attack)
+        {
+
         }
         if (!attack)
         {
@@ -93,7 +99,8 @@ public class chase : MonoBehaviour {
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(transform.position, player.transform.position - this.transform.position, out hit, Mathf.Infinity))
             {
-                if (hit.transform.gameObject.tag == "Player")
+                Debug.Log(hit.collider.gameObject);
+                if (hit.transform.gameObject.tag == "Player" || hit.collider.gameObject.tag == "WandBox")
                 {
                     agent.destination = player.position;
                     direction.y = 0;
@@ -143,10 +150,14 @@ public class chase : MonoBehaviour {
         {
             ownhp = ownhp - 2;
         }
+        if (other.gameObject.tag == "Fireball")
+        {
+            ownhp = ownhp - 2;
+        }
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name == "Close")
+        if (other.gameObject.tag == "Close")
         {
             closeEnough = true;
         }

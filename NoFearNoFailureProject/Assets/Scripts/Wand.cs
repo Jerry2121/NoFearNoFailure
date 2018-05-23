@@ -10,17 +10,16 @@ public class Wand : MonoBehaviour
     public float Speed = 6;
     void Update()
     {
-
        // var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
       //  var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
 
        // transform.Rotate(0, x, 0);
        // transform.Translate(0, 0, z);
 
-        if (Input.GetKeyDown(KeyCode.Joystick1Button0) && Inarea && PlayerPrefs.GetInt("Mana") >= 1)
+        if (OVRInput.GetDown(OVRInput.Button.One) && Inarea && PlayerPrefs.GetFloat("Mana") >= 5)
         {
             Fire();
-            PlayerPrefs.SetInt("Mana", PlayerPrefs.GetInt("Mana") - 5);
+            PlayerPrefs.SetFloat("Mana", PlayerPrefs.GetFloat("Mana") - 5f);
         }
     }
 

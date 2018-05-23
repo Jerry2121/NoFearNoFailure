@@ -4,20 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Effect
-  - Projectile
-  - Health
-  - Stamina
-  - Mana
-  - dontmove
-  - listlast
-  - Ground
-<<<<<<< HEAD
   - WandBox
-=======
-  - Fire
   - Enemy
->>>>>>> 6c912fbba2e3ef524f0f5e60764c2ea6ea201dd4
+  - Mana
+  - Fire
+  - Wraith
+  - Ground
+  - Close
   layers:
   - Default
   - TransparentFX
@@ -27,15 +20,15 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - Player
-  - Enemy
-  - SpawnWall
-  - FireBall
-  - Item
-  - Bleh
-  - OtherItem
-  - FireLayer
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

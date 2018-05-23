@@ -150,6 +150,7 @@ public class OVRPlayerController : MonoBehaviour
 	private bool prevHatRight = false;
 	private float SimulationRate = 60f;
 	private float buttonRotation = 0f;
+    public bool Moving;
 	private bool ReadyToSnapTurn; // Set to true when a snap turn has occurred, code requires one frame of centered thumbstick to enable another snap turn.
 
 	void Start()
@@ -311,13 +312,14 @@ public class OVRPlayerController : MonoBehaviour
 			bool moveLeft = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
 			bool moveRight = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
 			bool moveBack = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
-
+            
 			bool dpad_move = false;
 
 			if (OVRInput.Get(OVRInput.Button.DpadUp))
 			{
 				moveForward = true;
 				dpad_move = true;
+                Moving = true;
 
 			}
 
@@ -325,7 +327,8 @@ public class OVRPlayerController : MonoBehaviour
 			{
 				moveBack = true;
 				dpad_move = true;
-			}
+                Moving = true;
+            }
 
 			MoveScale = 1.0f;
 
@@ -342,9 +345,9 @@ public class OVRPlayerController : MonoBehaviour
 			// Compute this for key movement
 			float moveInfluence = Acceleration * 0.1f * MoveScale * MoveScaleMultiplier;
 
-			// Run!
-			if (dpad_move || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-				moveInfluence *= 2.0f;
+            // Run!
+            if (dpad_move || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+                moveInfluence *= 2.0f;
 
             Quaternion ort = transform.rotation;
 			Vector3 ortEuler = ort.eulerAngles;
