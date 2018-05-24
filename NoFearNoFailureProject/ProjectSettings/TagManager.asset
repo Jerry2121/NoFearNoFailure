@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Walls
+  - Fire
+  - Enemy
+  - Magic
+  - FireBall
   layers:
   - Default
   - TransparentFX
@@ -14,14 +18,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Magic
+  - Walls
+  - Enemy
+  - Other
+  - Player
+  - Gate
+  - Wand
+  - FireBall
   - 
   - 
   - 

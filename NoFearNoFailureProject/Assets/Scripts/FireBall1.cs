@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireBall1 : MonoBehaviour {
-    public GameObject Fireball;
-    public bool fireball = false;
+   // public GameObject Fireball;
+   //public bool fireball = false;
     public float timer = 0.0f;
+    public GameObject prefab;
 
     // Use this for initialization
     void Start () {
@@ -15,26 +16,18 @@ public class FireBall1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
-        if (fireball == true && timer >= 2)
-        {
-            //Destroy(this.gameObject);
-
-        }
     }
-    void OnTriggerEnter(Collider collision)
-    {
-
-        if (collision.gameObject.tag == "Enemy")
-        {
-            Fireball.SetActive(true);
-
-        }
-    }
+  
+    
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Walls")
         {
-            Fireball.SetActive(true);
+            //Fireball.SetActive(true);
+            Vector3 spawnPosition = transform.position;
+            GameObject FIREBALL = (GameObject)Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
+            Debug.Log("FIRE");
+            //Destroy(this.gameObject);
 
         }
 
