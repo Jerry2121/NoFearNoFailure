@@ -24,10 +24,18 @@ public class PlayerManager : MonoBehaviour {
     }
     public void Update()
     {
-        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
+        PlayerPrefs.SetFloat("Stamina", stamina);
+        if (PlayerPrefs.GetFloat("Stamina") >= 100)
         {
-            stamina -= Time.deltaTime * Mathf.Round(10.0f);
-            PlayerPrefs.SetFloat("Stamina", stamina);
+            stamina = 100;
+        }
+        if (PlayerPrefs.GetFloat("Stamina") <= 0)
+        {
+            stamina = 0;
+        }
+        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && Player.GetComponent<OVRPlayerController>().Moving == true)
+        {
+            stamina -= Time.deltaTime * 2;
             if (stamina <= 0)
             {
                 stamina = 0;
@@ -36,6 +44,7 @@ public class PlayerManager : MonoBehaviour {
         }
         else
         {
+            stamina += Time.deltaTime / 2;
             Player.GetComponent<OVRPlayerController>().Acceleration = 0.2f;
         }
     }

@@ -4,11 +4,24 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
+  - WandBox
+  - Enemy
+  - Mana
+  - Fire
+  - Wraith
+  - Ground
+  - Close
+=======
   - Walls
+<<<<<<< HEAD
   - Fire
   - Enemy
   - Magic
   - FireBall
+=======
+>>>>>>> 3e3c1e370ec9b1009d01ef5b6403bbd36a1b8d28
+>>>>>>> 08fcd33f4d65fb3ff5d688405e212fd2216d8999
   layers:
   - Default
   - TransparentFX

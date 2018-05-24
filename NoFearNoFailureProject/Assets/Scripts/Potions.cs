@@ -6,33 +6,37 @@ using UnityEngine.UI;
 public class Potions : MonoBehaviour {
     public GameObject StaminaText;
     public GameObject ManaText;
+    public float blah;
     // Use this for initialization
     void Start()
     {
-        PlayerPrefs.SetInt("Mana", 100);
+        PlayerPrefs.SetFloat("Mana", 100);
     }
 
     // Update is called once per frame
     void Update()
     {
-        StaminaText.GetComponent<Text>().text = "Stamina: " + PlayerPrefs.GetFloat("Stamina");
-        if (PlayerPrefs.GetFloat("Stamina") >= 100)
+        blah = PlayerPrefs.GetFloat("Mana");
+        StaminaText.GetComponent<Text>().text = "Stamina: " + Mathf.RoundToInt(PlayerPrefs.GetFloat("Stamina"));
+        ManaText.GetComponent<Text>().text = ("Mana: " + Mathf.RoundToInt(PlayerPrefs.GetFloat("Mana")));
+        if (PlayerPrefs.GetFloat("Mana") >= 100)
         {
-            PlayerPrefs.SetFloat("Stamina", 100);
+            PlayerPrefs.SetFloat("Mana", 100);
         }
-        if (PlayerPrefs.GetFloat("Stamina") <= 1)
+        if (PlayerPrefs.GetFloat("Mana") <= 0)
         {
-            PlayerPrefs.SetFloat("Stamina", 0);
+            PlayerPrefs.SetFloat("Mana", 0);
         }
-        ManaText.GetComponent<Text>().text = ("Mana: " + PlayerPrefs.GetInt("Mana"));
-        if (PlayerPrefs.GetInt("Mana") >= 100)
+        if (blah >= 100)
         {
-            PlayerPrefs.SetInt("Mana", 100);
+            blah = 100;
         }
-        if (PlayerPrefs.GetInt("Mana") <= 1)
+        if (blah <= 0)
         {
-            PlayerPrefs.SetInt("Mana", 0);
+            blah = 0;
         }
+        blah += Time.deltaTime / 2;
+        PlayerPrefs.SetFloat("Mana", blah);
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -44,9 +48,9 @@ public class Potions : MonoBehaviour {
         {
             PlayerPrefs.SetInt("Health", PlayerPrefs.GetInt("Health") + 20);
         }
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Mana")
         {
-            PlayerPrefs.SetInt("Mana", PlayerPrefs.GetInt("Mana") + 10);
+            PlayerPrefs.SetFloat("Mana", PlayerPrefs.GetFloat("Mana") + 10);
         }
     }
 }
