@@ -21,9 +21,16 @@ public class FireBallDamage : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Magic") {
-            Health -= 5;
+            //Health -= 5;
         }
             
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Magic")
+        {
+            Health -= 5;
+        }
 
+    }
 }

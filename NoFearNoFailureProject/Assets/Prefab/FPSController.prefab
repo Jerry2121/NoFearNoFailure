@@ -1547,6 +1547,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1932172718415490, guid: 8e456cd37f12f0142838fcf93615d133,
     type: 2}
   bulletSpawn: {fileID: 4421736190005740}
+  Inarea: 0
   Speed: 20
 --- !u!114 &114701940689480110
 MonoBehaviour:
