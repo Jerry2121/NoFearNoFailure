@@ -39,7 +39,6 @@ public class FireBall1 : MonoBehaviour {
             //Fireball.SetActive(true);
             Vector3 spawnPosition = transform.position;
             GameObject FIREBALL = (GameObject)Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
-            Debug.Log("FIRE");
             Destroy(this.gameObject);
 
         }

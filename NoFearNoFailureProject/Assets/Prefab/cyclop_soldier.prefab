@@ -1853,6 +1853,7 @@ MonoBehaviour:
   isDead: 0
   isHit: 0
   timer: 0
+  timer1: 0
   TimeIt: 0
 --- !u!114 &114147823103878960
 MonoBehaviour:
