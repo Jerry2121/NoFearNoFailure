@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 public class Cyclop : MonoBehaviour {
-
-    public int Health = 5;
+    public int startHealth = 25;
+    public int Health = 25;
     Animator anim;
     public bool isAttacking;
     public bool isWalking;
@@ -13,11 +14,13 @@ public class Cyclop : MonoBehaviour {
     public float timer = 0.0f;
     public float timer1 = 0.0f;
     public bool TimeIt = false;
+    public Image HealthBar;
     // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
         anim.SetBool("isWalking", true);
+        Health = startHealth;
 
     }
 
@@ -48,6 +51,8 @@ public class Cyclop : MonoBehaviour {
             timer += Time.deltaTime;
 
         }
+        HealthBar.fillAmount = Health / startHealth;
+
     }
     public void ATTACK() {
         anim.SetBool("isAttacking", true);
@@ -69,6 +74,7 @@ public class Cyclop : MonoBehaviour {
             anim.SetBool("isHit", true);
             isHit = true;
             TimeIt = true;
+            HealthBar.fillAmount = Health / startHealth;
 
         }
     }
