@@ -82636,9 +82636,9 @@ MonoBehaviour:
   dontDestroyMeshOnDelete: 0
   m_selectedFaces: 
   m_SelectedEdges:
-  - x: 221
-    y: 220
-  m_selectedTriangles: dd000000dc000000
+  - x: 137
+    y: 138
+  m_selectedTriangles: 890000008a000000
 --- !u!33 &465145860
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -89834,41 +89834,6 @@ Prefab:
     - target: {fileID: 4171826411648022, guid: aa7800adc482062428a3d7676aeb2aae, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_FillMethod
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_FillOrigin
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_FillClockwise
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.027406208
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa7800adc482062428a3d7676aeb2aae, type: 2}
