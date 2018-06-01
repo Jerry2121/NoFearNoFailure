@@ -21,25 +21,32 @@ public class PlayerManager : MonoBehaviour {
     public void Start()
     {
         PlayerPrefs.SetFloat("Stamina", 100);
+        PlayerPrefs.SetInt("Health", 100);
     }
     public void Update()
     {
         PlayerPrefs.SetFloat("Stamina", stamina);
-        if (PlayerPrefs.GetFloat("Stamina") >= 100)
+        if (PlayerPrefs.GetFloat("Stamina") > 100)
         {
             stamina = 100;
         }
-        if (PlayerPrefs.GetFloat("Stamina") <= 0)
+        if (PlayerPrefs.GetFloat("Stamina") < 0)
         {
             stamina = 0;
         }
-        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && Player.GetComponent<OVRPlayerController>().Moving == true)
+        if(PlayerPrefs.GetInt("Health") <= 0)
+        {
+            Debug.Log("Dead");
+            Time.timeScale = 0;
+            Player.GetComponent<OVRPlayerController>().Acceleration = 0f;
+        }
+        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
         {
             stamina -= Time.deltaTime * 2;
             if (stamina <= 0)
             {
                 stamina = 0;
-                Player.GetComponent<OVRPlayerController>().Acceleration = 0;
+                Player.GetComponent<OVRPlayerController>().Acceleration = 0.2f;
             }
         }
         else
