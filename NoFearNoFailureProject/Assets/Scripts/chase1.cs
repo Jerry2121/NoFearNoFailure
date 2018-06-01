@@ -147,7 +147,7 @@ public class chase1 : MonoBehaviour {
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(transform.position, player.transform.position - this.transform.position, out hit, Mathf.Infinity))
             {
-                if (hit.transform.gameObject.tag == "Player" || hit.collider.gameObject.tag == "WandBox" || hit.collider.gameObject.tag == "Close")
+                if (hit.transform.gameObject.tag == "Player" || hit.collider.gameObject.tag == "WandBox")
                 {
                     agent.destination = player.position;
                     direction.y = 0;
