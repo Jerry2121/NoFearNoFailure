@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Walls
+  - Enemy
+  - FireBall
   - Magic
   layers:
   - Default
@@ -14,12 +17,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Gate
+  - Enemy
+  - Player
+  - Magic
+  - Walls
+  - Other
   - 
   - 
   - 

@@ -35,6 +35,7 @@ public class Cyclop : MonoBehaviour {
             GetComponent<NavMeshAgent>().speed = 0;
             timer1 += Time.deltaTime;
             GetComponent<Rigidbody>().mass = 1000.0f;
+            GetComponent<CapsuleCollider>().enabled = false;
             if (timer1 >= 5)
             {
                 Destroy(gameObject);

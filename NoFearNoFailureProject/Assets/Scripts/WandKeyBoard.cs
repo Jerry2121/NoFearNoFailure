@@ -30,13 +30,16 @@ public class WandKeyBoard : MonoBehaviour
         {
             Mana += Time.deltaTime * ManaRegen;
         }
+        if (Mana >= 100) {
+            Mana = 100;
+        }
         if (Input.GetButtonDown("Fire1") && Mana >= 0)
         {
             Fire();
             Mana -= ManaBurn;
-            ManaBar.fillAmount = Mana / StartingMana;
-
         }
+        ManaBar.fillAmount = Mana / StartingMana;
+
     }
 
 
