@@ -31,7 +31,11 @@ GameObject:
   - component: {fileID: 135830933312121614}
   m_Layer: 11
   m_Name: Sphere3
+<<<<<<< HEAD
+  m_TagString: Fireball
+=======
   m_TagString: Magic
+>>>>>>> 99a833036c377287ce4db3cf6444115ff4a36266
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

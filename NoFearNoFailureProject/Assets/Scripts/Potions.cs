@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Potions : MonoBehaviour {
+    public GameObject HealthText;
     public GameObject StaminaText;
     public GameObject ManaText;
     public float blah;
@@ -19,6 +20,7 @@ public class Potions : MonoBehaviour {
         blah = PlayerPrefs.GetFloat("Mana");
         StaminaText.GetComponent<Text>().text = "Stamina: " + Mathf.RoundToInt(PlayerPrefs.GetFloat("Stamina"));
         ManaText.GetComponent<Text>().text = ("Mana: " + Mathf.RoundToInt(PlayerPrefs.GetFloat("Mana")));
+        HealthText.GetComponent<Text>().text = ("Health: " + PlayerPrefs.GetInt("Health"));
         if (PlayerPrefs.GetFloat("Mana") >= 100)
         {
             PlayerPrefs.SetFloat("Mana", 100);
