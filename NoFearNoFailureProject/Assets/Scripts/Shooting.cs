@@ -31,9 +31,9 @@ public class Shooting : MonoBehaviour {
         if (timer >= 2 && shootDir.magnitude < shootDistance)
         {
 
-            GameObject GoonBoss = (GameObject)Instantiate(FireBall, spawnPosition, Quaternion.identity);
-            //	GoonBoss.GetComponent<EnemyMove> ().player = GameObject.FindGameObjectWithTag ("Player").transform;
-            Destroy(GoonBoss, 5.0f);
+            GameObject Bullet = (GameObject)Instantiate(FireBall, spawnPosition, Quaternion.identity);
+            //	Bullet.GetComponent<EnemyMove>().player = GameObject.FindGameObjectWithTag ("Player").transform;
+            Destroy(Bullet, 5.0f);
             timer = 0;
 
         }

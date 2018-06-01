@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RIP : MonoBehaviour {
     public float timer = 0.0f;
-    public GameObject prefab;
-
+    public int DeathTime = 5;
 
     // Use this for initialization
     void Start () {
@@ -15,8 +14,9 @@ public class RIP : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
-        if (timer >= 5) {
-            Destroy(prefab);
+        if (timer >= DeathTime) {
+            Destroy(this.gameObject);
+
         }
     }
 }
