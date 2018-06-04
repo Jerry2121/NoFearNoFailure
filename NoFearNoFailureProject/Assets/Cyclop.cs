@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 public class Cyclop : MonoBehaviour {
-    public int startHealth = 25;
-    public int Health = 25;
+    public float Health = 25;
+    public float StartingHealth = 25;
     Animator anim;
     public bool isAttacking;
     public bool isWalking;
@@ -20,19 +20,22 @@ public class Cyclop : MonoBehaviour {
     {
         anim = GetComponent<Animator>();
         anim.SetBool("isWalking", true);
-        Health = startHealth;
+        Health = StartingHealth;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        HealthBar.fillAmount = Health / StartingHealth;
+
         if (Health <= 0)
         {
             anim.SetBool("isDead", true);
             GetComponent<NavMeshAgent>().speed = 0;
             timer1 += Time.deltaTime;
             GetComponent<Rigidbody>().mass = 1000.0f;
+            GetComponent<CapsuleCollider>().enabled = false;
             if (timer1 >= 5)
             {
                 Destroy(gameObject);
@@ -51,7 +54,6 @@ public class Cyclop : MonoBehaviour {
             timer += Time.deltaTime;
 
         }
-        HealthBar.fillAmount = Health / startHealth;
 
     }
     public void ATTACK() {
@@ -74,7 +76,6 @@ public class Cyclop : MonoBehaviour {
             anim.SetBool("isHit", true);
             isHit = true;
             TimeIt = true;
-            HealthBar.fillAmount = Health / startHealth;
 
         }
     }

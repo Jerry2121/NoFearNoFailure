@@ -5190,7 +5190,7 @@ GameObject:
   - component: {fileID: 212448147}
   m_Layer: 11
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5367,7 +5367,7 @@ GameObject:
   - component: {fileID: 276247972}
   m_Layer: 11
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5884,7 +5884,7 @@ GameObject:
   - component: {fileID: 354474274}
   m_Layer: 13
   m_Name: lantern (3)
-  m_TagString: Walls
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5901,7 +5901,7 @@ NavMeshObstacle:
   m_Extents: {x: 1.45, y: 2.6, z: 1.45}
   m_MoveThreshold: 0.1
   m_Carve: 1
-  m_CarveOnlyStationary: 1
+  m_CarveOnlyStationary: 0
   m_Center: {x: 0, y: 2.5, z: 0}
   m_TimeToStationary: 0.5
 --- !u!54 &354474275
@@ -6187,6 +6187,10 @@ Prefab:
     - target: {fileID: 4036671697892508, guid: 2c79a0dcbeba10a4d856709b2b5b11c7, type: 2}
       propertyPath: m_RootOrder
       value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253724635962498, guid: 2c79a0dcbeba10a4d856709b2b5b11c7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c79a0dcbeba10a4d856709b2b5b11c7, type: 2}
@@ -82636,9 +82640,9 @@ MonoBehaviour:
   dontDestroyMeshOnDelete: 0
   m_selectedFaces: 
   m_SelectedEdges:
-  - x: 221
-    y: 220
-  m_selectedTriangles: dd000000dc000000
+  - x: 5648
+    y: 5650
+  m_selectedTriangles: 1016000012160000
 --- !u!33 &465145860
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -83249,7 +83253,7 @@ GameObject:
   - component: {fileID: 604874647}
   m_Layer: 11
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84238,7 +84242,7 @@ GameObject:
   - component: {fileID: 815761047}
   m_Layer: 13
   m_Name: lantern (2)
-  m_TagString: Walls
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84255,7 +84259,7 @@ NavMeshObstacle:
   m_Extents: {x: 1.45, y: 2.6, z: 1.45}
   m_MoveThreshold: 0.1
   m_Carve: 1
-  m_CarveOnlyStationary: 1
+  m_CarveOnlyStationary: 0
   m_Center: {x: 0, y: 2.5, z: 0}
   m_TimeToStationary: 0.5
 --- !u!54 &815761048
@@ -89597,7 +89601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.0852}
+  m_AnchoredPosition: {x: 0.09, y: 0.26}
   m_SizeDelta: {x: 0, y: 0.1702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157129441
@@ -89750,6 +89754,16 @@ Prefab:
       propertyPath: ManaBurn
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 108232632395186822, guid: 90735a0c61d20ff42af5f00f9cb3edd0,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108232632395186822, guid: 90735a0c61d20ff42af5f00f9cb3edd0,
+        type: 2}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90735a0c61d20ff42af5f00f9cb3edd0, type: 2}
   m_IsPrefabParent: 0
@@ -89834,41 +89848,6 @@ Prefab:
     - target: {fileID: 4171826411648022, guid: aa7800adc482062428a3d7676aeb2aae, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_FillMethod
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_FillOrigin
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_FillClockwise
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.027406208
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673258902856592, guid: aa7800adc482062428a3d7676aeb2aae,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa7800adc482062428a3d7676aeb2aae, type: 2}
@@ -90569,6 +90548,10 @@ Prefab:
     - target: {fileID: 1028471122118906, guid: 537aa1e7340e4c34da374ab7d3906880, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028471122118906, guid: 537aa1e7340e4c34da374ab7d3906880, type: 2}
+      propertyPath: m_TagString
+      value: Magic
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 537aa1e7340e4c34da374ab7d3906880, type: 2}
@@ -91723,7 +91706,7 @@ GameObject:
   - component: {fileID: 1807855610}
   m_Layer: 13
   m_Name: lantern (1)
-  m_TagString: Walls
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91740,7 +91723,7 @@ NavMeshObstacle:
   m_Extents: {x: 1.45, y: 2.6, z: 1.45}
   m_MoveThreshold: 0.1
   m_Carve: 1
-  m_CarveOnlyStationary: 1
+  m_CarveOnlyStationary: 0
   m_Center: {x: 0, y: 2.5, z: 0}
   m_TimeToStationary: 0.5
 --- !u!54 &1807855611
@@ -92409,7 +92392,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1986873157}
   m_LocalRotation: {x: -0, y: -0.00000002235174, z: 0.0000000037252899, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00000052410047}
   m_LocalScale: {x: 1.0000225, y: 1.0000225, z: 1.0000235}
   m_Children:
   - {fileID: 1666444762}
@@ -92418,7 +92401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0, y: -0.14}
+  m_AnchoredPosition: {x: -0.019998968, y: 0.03479962}
   m_SizeDelta: {x: 0, y: 0.1702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1986873159
@@ -92759,7 +92742,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1667447606609718, guid: 16f1a07713aea554ebda2390a89f28b1, type: 2}
       propertyPath: m_TagString
-      value: Walls
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1982300844644342, guid: 16f1a07713aea554ebda2390a89f28b1, type: 2}
       propertyPath: m_Layer
@@ -92784,6 +92767,11 @@ Prefab:
     - target: {fileID: 4005794464835272, guid: 16f1a07713aea554ebda2390a89f28b1, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 208830424067922862, guid: 16f1a07713aea554ebda2390a89f28b1,
+        type: 2}
+      propertyPath: m_CarveOnlyStationary
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16f1a07713aea554ebda2390a89f28b1, type: 2}
