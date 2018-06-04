@@ -147,6 +147,7 @@ public class chase1 : MonoBehaviour {
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(transform.position, player.transform.position - this.transform.position, out hit, Mathf.Infinity))
             {
+                Debug.Log(hit.collider.gameObject);
                 if (hit.transform.gameObject.tag == "Player" || hit.collider.gameObject.tag == "WandBox")
                 {
                     agent.destination = player.position;
@@ -195,10 +196,10 @@ public class chase1 : MonoBehaviour {
              ScarTrig = true;
          }
     }
-     void OnCollisionEnter(Collision collision)
+     void OnTriggerEnter(Collider other)
     {
         
-        if (collision.gameObject.tag == "Fireball")
+        if (other.gameObject.tag == "Fireball")
         {
             ownhp = ownhp - 2;
         }

@@ -17,31 +17,32 @@ public class FireBall1 : MonoBehaviour {
 	void Update () {
         timer += Time.deltaTime;
     }
-  
-   /* 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Walls")
-        {
-            //Fireball.SetActive(true);
-            Vector3 spawnPosition = transform.position;
-            GameObject FIREBALL = (GameObject)Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
-            Debug.Log("FIRE");
-            Destroy(this.gameObject);
 
-        }
+    /*
+     void OnCollisionEnter(Collision collision)
+     {
+         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Walls")
+         {
+             //Fireball.SetActive(true);
+             Vector3 spawnPosition = transform.position;
+             GameObject FIREBALL = (GameObject)Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
+             Debug.Log("FIRE");     
+             Destroy(this.gameObject);
 
-    }*/
+         }
+
+     }
+    */
     void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Walls")
-        {
-            //Fireball.SetActive(true);
-            Vector3 spawnPosition = transform.position;
-            GameObject FIREBALL = (GameObject)Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+   {
+       if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Walls")
+       {
+           //Fireball.SetActive(true);
+           Vector3 spawnPosition = transform.position;
+           GameObject FIREBALL = (GameObject)Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
+           Destroy(this.gameObject);
 
-        }
+       }
 
-    }
+   }
 }

@@ -4,20 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
+  - Undefined
   - WandBox
   - Enemy
+  - Wall
   - Mana
-  - Magic
-  - FireBall
-=======
-  - Walls
-  - Enemy
-  - FireBall
-  - Magic
-  - Fire
-  - Bullet
->>>>>>> fbdd0ccf46cfae5be6989ef979c99584eae02b6c
+  - Fireball
   layers:
   - Default
   - TransparentFX
@@ -27,21 +19,12 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
   - 
   - 
   - 
   - 
   - 
   - 
-=======
-  - Gate
-  - Enemy
-  - Player
-  - Magic
-  - Walls
-  - Other
->>>>>>> fbdd0ccf46cfae5be6989ef979c99584eae02b6c
   - 
   - 
   - 

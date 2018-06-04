@@ -17,24 +17,24 @@ public class FireBall2 : MonoBehaviour {
 	void Update () {
         timer += Time.deltaTime;
     }
-  
-   /* 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Walls")
-        {
-            //Fireball.SetActive(true);
-            Vector3 spawnPosition = transform.position;
-            GameObject FIREBALL = (GameObject)Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
-            Debug.Log("FIRE");
-            Destroy(this.gameObject);
 
-        }
+    /* 
+     void OnCollisionEnter(Collision collision)
+     {
+         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Walls")
+         {
+             //Fireball.SetActive(true);
+             Vector3 spawnPosition = transform.position;
+             GameObject FIREBALL = (GameObject)Instantiate(prefab, gameObject.transform.position, Quaternion.identity);
+             Debug.Log("FIRE");
+             Destroy(this.gameObject);
 
-    }*/
-    void OnCollisionEnter(Collision collision)
+         }
+
+     }*/
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Walls")
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Walls")
         {
             //Fireball.SetActive(true);
             Vector3 spawnPosition = transform.position;
